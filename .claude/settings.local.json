@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npx tsc *)",
+      "Bash(npx vite *)",
+      "Bash(npm run *)",
+      "Bash(xdg-open http://localhost:3000)",
+      "Bash(node -e \"const ai = require\\('./node_modules/ai/dist/index.cjs'\\); console.log\\(Object.keys\\(ai\\).filter\\(k => ['streamText','generateText','tool','CoreMessage'].includes\\(k\\)\\)\\)\")",
+      "Bash(node -e \"const oai = require\\('./node_modules/@ai-sdk/openai/dist/index.cjs'\\); console.log\\(Object.keys\\(oai\\)\\)\")",
+      "Bash(node -e \"const d=require\\('/dev/stdin'\\); console.log\\('ai',d.version\\)\")",
+      "Bash(node -e \"const d=require\\('/dev/stdin'\\); console.log\\('zod',d.version\\)\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('ai', d['version']\\)\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('openai-provider', d['version']\\)\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('zod', d['version']\\)\")",
+      "Bash(node *)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(list\\(d.get\\('exports',{}\\).keys\\(\\)\\)[:10]\\)\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173/)",
+      "Bash(npx pwa-assets-generator *)",
+      "Bash(find *)",
+      "Bash(rsync *)",
+      "Bash(chmod +x *)"
+    ]
+  }
+}

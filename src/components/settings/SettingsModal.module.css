@@ -1,0 +1,77 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ── Section ──────────────────────────────────────────────────────────── */
+
+.section {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.section:first-child {
+  padding-top: 0;
+}
+
+.section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.sectionHead {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.sectionNote {
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--text-muted);
+}
+
+.sectionRequired {
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--danger);
+  font-size: 10px;
+}
+
+.getKeyLink {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary-light);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(37, 99, 235, 0.35);
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.getKeyLink:hover {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.mt {
+  margin-top: 12px;
+}
+
+/* ── Danger zone ──────────────────────────────────────────────────────── */
+
+.dangerZone {
+  border-top: 1px solid var(--border);
+}
+
+.dangerNote {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 8px;
+}

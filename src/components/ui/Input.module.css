@@ -1,0 +1,86 @@
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 16px; /* 16px minimum prevents iOS auto-zoom */
+  color: var(--text);
+  background: var(--surface);
+  outline: none;
+  transition: border-color 0.15s;
+  appearance: none;
+}
+
+.input:focus {
+  border-color: var(--primary-light);
+}
+
+.input::placeholder {
+  color: var(--text-muted);
+}
+
+.inputError {
+  border-color: var(--danger);
+}
+
+.hint {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.errorMsg {
+  font-size: 12px;
+  color: var(--danger);
+}
+
+/* ── Password wrapper ─────────────────────────────────────────────────── */
+
+.pwWrap {
+  position: relative;
+}
+
+.pwWrap .input {
+  padding-right: 44px;
+}
+
+.pwToggle {
+  position: absolute;
+  right: 12px;
+  /* align with the input's inner text — input has 11px padding-top + some line-height */
+  top: calc(50% + 14px); /* account for the label above */
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 15px;
+  padding: 4px;
+  line-height: 1;
+}
+
+/* When there's no label the group still centres correctly */
+.pwWrap:not(:has(.label)) .pwToggle {
+  top: 50%;
+}
+
+/* ── Select ───────────────────────────────────────────────────────────── */
+
+.select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%2364748b' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+}

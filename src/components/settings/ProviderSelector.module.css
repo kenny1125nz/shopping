@@ -1,0 +1,44 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.card {
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px;
+  background: transparent;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.15s, background-color 0.15s;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.card:hover {
+  border-color: var(--primary);
+}
+
+.cardActive {
+  border-color: var(--primary-light);
+  background: #eff6ff;
+}
+
+.name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.desc {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 400px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

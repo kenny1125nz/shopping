@@ -1,0 +1,44 @@
+.card {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 56px 32px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+}
+
+@media (max-width: 560px) {
+  .card {
+    padding: 32px 20px;
+  }
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.dots span {
+  width: 11px;
+  height: 11px;
+  background: var(--primary);
+  border-radius: 50%;
+  animation: bounce 1.3s infinite ease-in-out;
+}
+
+.dots span:nth-child(2) { animation-delay: 0.2s; }
+.dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0.7); opacity: 0.5; }
+  40%            { transform: scale(1.1); opacity: 1; }
+}
+
+.message {
+  font-size: 14px;
+  color: var(--text-muted);
+  min-height: 1.5em;
+  transition: opacity 0.3s;
+}

@@ -1,0 +1,106 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s, color 0.15s, transform 0.1s, opacity 0.15s;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn:not(:disabled):active {
+  transform: scale(0.97);
+}
+
+/* ── Variants ─────────────────────────────────────────────────────────── */
+
+.primary {
+  background: var(--primary);
+  color: #fff;
+}
+.primary:not(:disabled):hover {
+  background: var(--primary-hover);
+}
+
+.accent {
+  background: var(--accent);
+  color: #fff;
+}
+.accent:not(:disabled):hover {
+  background: var(--accent-hover);
+}
+
+.outline {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text);
+}
+.outline:not(:disabled):hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.danger {
+  background: var(--danger);
+  color: #fff;
+}
+.danger:not(:disabled):hover {
+  background: var(--danger-hover);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--text-muted);
+}
+.ghost:not(:disabled):hover {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ── Sizes ────────────────────────────────────────────────────────────── */
+
+.sm {
+  padding: 9px 14px;
+  font-size: 13px;
+  min-height: 36px;
+}
+
+.md {
+  padding: 11px 20px;
+  min-height: 44px; /* comfortable touch target */
+}
+
+/* ── Modifiers ────────────────────────────────────────────────────────── */
+
+.fullWidth {
+  width: 100%;
+}
+
+/* ── Loading spinner ──────────────────────────────────────────────────── */
+
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.65s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
